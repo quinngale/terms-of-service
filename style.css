@@ -2,9 +2,9 @@
 	--light: hsl(0, 0%, 100%);
 	--dark: hsl(0, 0%, 0%);
 
-	--color-accent: hsl(348, 100%, 68%);
-	--color-accent-light: hsla(348, 100%, 68%, 0.696);
-	--color-accent-lighter: hsla(348, 100%, 68%, 0.105);
+	--color-accent: hsl(348, 0%, 47%);
+	--color-accent-light: hsla(348, 0%, 47%, 0.696);
+	--color-accent-lighter: hsla(348, 0%, 47%, 0.105);
 
 	--color-background: var(--light);
 	--color-foreground: var(--dark);
@@ -21,7 +21,10 @@
 }
 
 body {
-	font-family: sans-serif;
+	font-family: Georgia,
+		Times,
+		Times New Roman,
+		serif;
 	margin: 0;
 	padding: 0;
 	background-color: var(--color-background);
@@ -50,7 +53,6 @@ h1 {
 	padding-block-end: var(--width-heavy);
 	font-size: 2rem;
 	font-weight: bold;
-	border-bottom: var(--width-medium) solid var(--color-accent);
 }
 
 abbr {
@@ -62,8 +64,9 @@ abbr:hover {
 }
 
 button {
+	border-radius: var(--width-light);
+	font-family: inherit;
 	background-color: var(--color-accent);
-	border-radius: var(--width-heavy);
 	border: none;
 	padding: calc(var(--width-heavy) * 2) calc(var(--width-heavy) * 4);
 	text-transform: uppercase;
@@ -88,10 +91,8 @@ button:disabled {
 }
 
 #tos {
-	border-radius: var(--width-heavy);
 	margin: auto;
 	overflow: hidden;
-	border: var(--width-light) solid var(--color-accent-light);
 	background-color: var(--color-accent-lighter);
 	margin-block: 1rem;
 	-moz-user-select: none;
