@@ -14,6 +14,10 @@
 	--width-light: 0.125rem;
 
 	--button-color-background: var(--light);
+
+	--link-color: hsl(240, 65%, 47%);
+	--link-color--active: hsl(0, 65%, 47%);
+	--link-color--visited: hsl(300, 65%, 47%);
 }
 
 * {
@@ -55,6 +59,22 @@ h1 {
 	font-weight: bold;
 }
 
+a {
+	color: var(--link-color);
+
+	&:hover {
+		filter: brightness(120%);
+	}
+
+	&:active {
+		color: var(--link-color--active);
+	}
+
+	&:visited {
+		color: var(--link-color--visited);
+	}
+}
+
 abbr {
 	text-decoration-color: var(--color-accent);
 }
@@ -88,6 +108,10 @@ button:active {
 button:disabled {
 	opacity: 60%;
 	cursor: not-allowed;
+}
+
+#tos-box {
+	margin-block: calc(var(--width-heavy) * 4)
 }
 
 #tos {
